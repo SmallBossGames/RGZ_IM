@@ -54,10 +54,26 @@ namespace RGZ_IM
         /// <returns></returns>
         public static double GetServiceTime(double time)
         {
-            if (time < 960) return 7 + PlusMinusWork(time);
-            else return 12 + PlusMinusWork(time);
+            if (time < 960) return 6 + PlusMinusWork(time);
+            else return 11 + 2 * PlusMinusWork(time);
         }
 
+        /// <summary>
+        /// Время совершения заказа
+        /// </summary>
+        /// <returns></returns>
+        public static double GetOrderTime() => 0.75 + PlusMinusOrder();
+
+        /// <summary>
+        /// Генерация времени разброса заказа заявки
+        /// </summary>
+        /// <returns></returns>
+        static double PlusMinusOrder()
+        {
+            if (random.Next(0, 1) == 0) return random.NextDouble();
+            else return -random.NextDouble();
+        }
+            
         /// <summary>
         /// Генерация разброса для времени обслуживания заявки в зависимости от времени суток
         /// </summary>
