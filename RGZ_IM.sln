@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGZ_IM", "RGZ_IM\RGZ_IM.csproj", "{68164A29-D94B-47A5-A93B-9C11C817127C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68164A29-D94B-47A5-A93B-9C11C817127C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68164A29-D94B-47A5-A93B-9C11C817127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68164A29-D94B-47A5-A93B-9C11C817127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68164A29-D94B-47A5-A93B-9C11C817127C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E18D83D1-7296-4AE6-8BB1-4E4AB747FCFD}
+	EndGlobalSection
+EndGlobal
