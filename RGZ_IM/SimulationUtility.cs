@@ -33,9 +33,9 @@ namespace RGZ_IM
         /// <summary>
         /// Время до возникновения следующей волны
         /// </summary>
-        public static double GetWave(double math)
+        public static double GetWave()
         {
-            return -math * Math.Log(random.NextDouble());
+            return -6 * Math.Log(random.NextDouble());
         }
 
         /// <summary>
@@ -56,16 +56,6 @@ namespace RGZ_IM
         {
             if (time < 960) return 7 + PlusMinusWork(time);
             else return 12 + PlusMinusWork(time);
-        }
-
-        /// <summary>
-        /// Генерация разброса для интервала
-        /// </summary>
-        /// <returns></returns>
-        static double PlusMinus()
-        {
-            if (random.Next(0, 1) == 0) return random.NextDouble() / 3;
-            else return -random.NextDouble() / 3;
         }
 
         /// <summary>
