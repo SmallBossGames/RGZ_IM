@@ -54,7 +54,7 @@ namespace RGZ_IM
         /// <returns></returns>
         public double GetWorkTime(double time)
         {
-            if (time < 16) return 7 + PlusMinusWork(time);
+            if (time < 960) return 7 + PlusMinusWork(time);
             else return 12 + PlusMinusWork(time);
         }
 

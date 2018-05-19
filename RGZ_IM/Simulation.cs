@@ -79,7 +79,7 @@ namespace RGZ_IM
 
         public InputQueue()
         {
-            EndTime = SimaulationUtility.GetNextPeopleTime(false);
+            EndTime = SimulationUtility.GetNextPeopleTime(false);
         }
 
         public double EndTime { get; private set; }
@@ -88,8 +88,8 @@ namespace RGZ_IM
 
         public bool TryMake(double timeScale)
         {
-            EndTime = timeScale + SimaulationUtility.GetNextPeopleTime(wave.IsWave);
-            AddPeople(timeScale, SimaulationUtility.GetNextPeopleCount(wave.IsWave));
+            EndTime = timeScale + SimulationUtility.GetNextPeopleTime(wave.IsWave);
+            AddPeople(timeScale, SimulationUtility.GetNextPeopleCount(wave.IsWave));
             flow.ToWork(timeScale);
             return true;
         }
@@ -100,7 +100,7 @@ namespace RGZ_IM
         {
             for (int i = 0; i < count; i++)
             {
-                var serviceTime = SimaulationUtility.GetServiceTime();
+                var serviceTime = SimulationUtility.GetServiceTime();
                 queue.Enqueue(new Statistic.Human(timeScale, serviceTime));
             }
         }
@@ -126,12 +126,12 @@ namespace RGZ_IM
             if (IsWave)
             {
                 IsWave = false;
-                EndTime = timeScale + SimaulationUtility.GetWave();
+                EndTime = timeScale + SimulationUtility.GetWave();
             }
             else
             {
                 IsWave = true;
-                EndTime = timeScale + SimaulationUtility.GetWaveLength();
+                EndTime = timeScale + SimulationUtility.GetWaveLength();
             }
 
             flow.ToWork(timeScale);
