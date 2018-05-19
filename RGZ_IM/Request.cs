@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RGZ_IM
 {
-    public class Request
+    class Request
     {
         Random random = new Random();
 
@@ -14,33 +14,33 @@ namespace RGZ_IM
         /// Генерация интервала прихода заявок
         /// </summary>
         /// <returns></returns>
-        public double GetInterval() => 0.5 + PlusMinus();
+        double GetInterval() => 0.5 + PlusMinus();
 
         /// <summary>
         /// Уйдёт ли заявка?
         /// 0, 1, 2, 3, 4, 5, 6, 7, 8 - проходит в очередь, 9 - отказ
         /// </summary>
         /// <returns></returns>
-        public int IsRequestDenied() => random.Next(0, 9);
+        int IsRequestDenied() => random.Next(0, 9);
 
         /// <summary>
         /// Генерация события волны
         /// </summary>
         /// <param Матожидание="math"></param>
         /// <returns></returns>
-        public double GetWave(double math) => -math * Math.Log(random.NextDouble());
+        double GetWave(double math) => -math * Math.Log(random.NextDouble());
 
         /// <summary>
         /// Генерация продолжительности волны
         /// </summary>
         /// <returns></returns>
-        public double GetWaveTime() => 90 + random.Next(0, 30);
+        double GetWaveTime() => 90 + random.Next(0, 30);
 
         /// <summary>
         /// Генерация количества пришедших одновременно заявок
         /// </summary>
         /// <returns></returns>
-        public int GetRequest(bool isWave)
+        int GetRequest(bool isWave)
         {
             if (isWave == false) return random.Next(0, 6);
             else return random.Next(3, 6);
@@ -52,7 +52,7 @@ namespace RGZ_IM
         /// </summary>
         /// <param Время суток="time"></param>
         /// <returns></returns>
-        public double GetWorkTime(double time)
+        double GetWorkTime(double time)
         {
             if (time < 960) return 7 + PlusMinusWork(time);
             else return 12 + PlusMinusWork(time);
