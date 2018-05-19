@@ -16,8 +16,8 @@ namespace RGZ_IM
         /// <param name="isWave">Режим волны</param>
         public static double GetNextPeopleTime(bool isWave)
         {
-            if (isWave == false) return 0.5 + PlusMinus();
-            else return 0.3 + PlusMinus() / 2;
+            if (isWave == false) return -0.67 * Math.Log(random.NextDouble()); // 0.67 человека в минуту
+            else return -0.3 * Math.Log(random.NextDouble());
         }
 
         /// <summary>
