@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
     <Compile Include="SimaulationUtility.cs" />
     <Compile Include="Simulation.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

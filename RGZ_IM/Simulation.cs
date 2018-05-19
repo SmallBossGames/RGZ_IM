@@ -78,7 +78,6 @@ namespace RGZ_IM
                 queue.Enqueue(new Statistic.Human(timeScale));
             }
         }
-
     }
 
     class Wave : IQuest
@@ -91,7 +90,7 @@ namespace RGZ_IM
 
         public bool TryMake(double timeScale)
         {
-            if(IsWave)
+            if (IsWave)
             {
                 IsWave = false;
                 EndTime = timeScale + SimaulationUtility.GetWave();
