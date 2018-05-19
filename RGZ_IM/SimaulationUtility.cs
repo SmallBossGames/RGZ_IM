@@ -29,5 +29,10 @@ namespace RGZ_IM
         {
             throw new NotImplementedException();
         }
+
+        public static double GetServiceTime()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
