@@ -34,7 +34,7 @@ namespace RGZ_IM
 
         /// <summary>
         /// Время до возникновения следующей волны
-        /// Экспоненциальный закон распределения
+        /// Равномерный закон распределения
         /// </summary>
         public static double GetWave() => 360 + PlusMinusWave();
 
