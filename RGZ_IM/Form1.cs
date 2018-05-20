@@ -14,7 +14,7 @@ namespace RGZ_IM
     {
         public Form1()
         {
-            Simulation.Simulate(1080);
+            var sim = Simulation.Simulate(1080);
             InitializeComponent();
         }
     }
