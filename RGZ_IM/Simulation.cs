@@ -41,23 +41,32 @@ namespace RGZ_IM
 
     class Statistic
     {
-        public class Human
+        public class Human:IComparable<Human>
         {
             public double CreateTime { get; private set; }
 
-            public double ServiceTime { get; private set; }
+            public double ServiceTimePhase1 { get; private set; }
+
+            public double ServiceTimePhase2 { get; private set; }
 
             public double EndTime { get; private set; }
 
+
             public void SetEndTime(double timeScale)
             {
-                EndTime = timeScale + ServiceTime;
+                EndTime = timeScale + ServiceTimePhase1;
             }
 
-            public Human(double createTime, double serviceTime)
+            public int CompareTo(Human other)
+            {
+                return EndTime.CompareTo(other.EndTime);
+            }
+
+            public Human(double createTime, double serviceTimePhase1, double serviceTimePhase2)
             {
                 CreateTime = createTime;
-                ServiceTime = serviceTime;
+                ServiceTimePhase1 = serviceTimePhase1;
+                ServiceTimePhase2 = serviceTimePhase2;
             }
         }
     }
@@ -100,8 +109,10 @@ namespace RGZ_IM
         {
             for (int i = 0; i < count; i++)
             {
-                var serviceTime = SimulationUtility.GetServiceTime();
-                queue.Enqueue(new Statistic.Human(timeScale, serviceTime));
+                var serviceTimePhase1 = SimulationUtility.GetServiceTimePhase1();
+                var serviceTimePhase2 = SimulationUtility.GetServiceTimePhase2(timeScale);
+
+                queue.Enqueue(new Statistic.Human(timeScale, serviceTimePhase1, serviceTimePhase2));
             }
         }
     }

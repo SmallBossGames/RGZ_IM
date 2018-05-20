@@ -52,7 +52,7 @@ namespace RGZ_IM
         /// Время обслуживания заявки
         /// </summary>
         /// <returns></returns>
-        public static double GetServiceTime(double time)
+        public static double GetServiceTimePhase2(double time)
         {
             if (time < 960) return 6 + PlusMinusWork(time);
             else return 11 + 2 * PlusMinusWork(time);
@@ -62,7 +62,7 @@ namespace RGZ_IM
         /// Время совершения заказа
         /// </summary>
         /// <returns></returns>
-        public static double GetOrderTime() => 0.75 + PlusMinusOrder();
+        public static double GetServiceTimePhase1() => 0.75 + PlusMinusOrder();
 
         /// <summary>
         /// Генерация времени разброса заказа заявки
