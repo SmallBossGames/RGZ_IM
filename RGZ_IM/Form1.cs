@@ -21,6 +21,10 @@ namespace RGZ_IM
         private void button1_Click(object sender, EventArgs e)
         {
             var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text));
+            PeopleCountTextBox.Text = statistic.PeopleCount.ToString();
+            MiddleTimeInQueveTextBox.Text = statistic.MiddleInQueueTime.ToString();
+            MiddleTimeInPhase1TextBox.Text = statistic.MiddlePhase1Time.ToString();
+            MiddleTimeInPhase2TextBox.Text = statistic.MiddlePhase2Time.ToString();
         }
     }
 }
