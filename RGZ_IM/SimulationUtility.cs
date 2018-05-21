@@ -28,7 +28,6 @@ namespace RGZ_IM
         /// <param name="isWave">Режим волны</param>
         public static int GetNextPeopleCount(bool isWave)
         {
-            //return 1;
             if (isWave == false) return random.Next(1, 3);
             else return random.Next(1, 3);
         }
@@ -65,7 +64,7 @@ namespace RGZ_IM
         /// Равномерный закон распределения
         /// </summary>
         /// <returns></returns>
-        public static double GetOrderTime() => 0.75 + PlusMinusOrder() / 2;
+        public static double GetOrderTime() => 1.5 + PlusMinusOrder() / 2;
 
         /// <summary>
         /// Генерация времени разброса заказа заявки
