@@ -158,6 +158,12 @@ namespace RGZ_IM
 
         public int CompareTo(IQuest other) => EndTime.CompareTo(other.EndTime);
 
+        public Wave()
+        {
+            IsWave = false;
+            EndTime = SimulationUtility.GetWave();
+        }
+
         public void Init(Flow flow)
         {
             this.flow = flow;
@@ -235,9 +241,10 @@ namespace RGZ_IM
             }
 
             flows.Sort();
-
+            
             EndTime = flows[0].EndTime;
 
+            Console.WriteLine($"{flows.Count} {FreeFlowsCount}");
             return true;
         }
 
