@@ -28,7 +28,6 @@ namespace RGZ_IM
         /// <param name="isWave">Режим волны</param>
         public static int GetNextPeopleCount(bool isWave)
         {
-            //return 1;
             if (isWave == false) return random.Next(1, 3);
             else return random.Next(1, 3);
         }
