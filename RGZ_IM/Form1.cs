@@ -16,5 +16,10 @@ namespace RGZ_IM
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text));
+        }
     }
 }
