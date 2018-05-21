@@ -13,8 +13,9 @@ namespace RGZ_IM
             var flow = new Flow(15, 5, 6, 7);
             var queue = new InputQueue();
             var wave = new Wave();
+            var statistic = new Statistic();
 
-            flow.Init(wave, queue);
+            flow.Init(wave, queue, statistic);
             queue.Init(wave, flow);
             wave.Init(flow);
 
@@ -34,30 +35,69 @@ namespace RGZ_IM
                 }
             }
 
-            return new Statistic();
+            return statistic;
         }
 
     }
 
     class Statistic
     {
-        public class Human
+
+        private double phase1Time;
+        private double phase2Time;
+        private double inQueueTime;
+
+        public int PeopleCount { get; private set; }
+
+        public double MiddlePhase1Time => phase1Time / PeopleCount;
+
+        public double MiddlePhase2Time => phase2Time / PeopleCount;
+
+        public double MiddleInQueueTime => inQueueTime / PeopleCount;
+
+        public Statistic()
+        {
+            phase1Time = 0.0;
+            phase2Time = 0.0;
+            inQueueTime = 0.0;
+        }
+
+        public void AddStatistic(Human human)
+        {
+            var inQueue = human.EndTime - human.CreateTime - human.ServiceTimePhase1;
+
+            PeopleCount++;
+            inQueueTime += inQueue;
+            phase1Time += human.ServiceTimePhase1;
+            phase2Time += human.ServiceTimePhase2;
+        }
+
+        public class Human:IComparable<Human>
         {
             public double CreateTime { get; private set; }
 
-            public double ServiceTime { get; private set; }
+            public double ServiceTimePhase1 { get; private set; }
+
+            public double ServiceTimePhase2 { get; private set; }
 
             public double EndTime { get; private set; }
 
+
             public void SetEndTime(double timeScale)
             {
-                EndTime = timeScale + ServiceTime;
+                EndTime = timeScale + ServiceTimePhase1;
             }
 
-            public Human(double createTime, double serviceTime)
+            public int CompareTo(Human other)
+            {
+                return EndTime.CompareTo(other.EndTime);
+            }
+
+            public Human(double createTime, double serviceTimePhase1, double serviceTimePhase2)
             {
                 CreateTime = createTime;
-                ServiceTime = serviceTime;
+                ServiceTimePhase1 = serviceTimePhase1;
+                ServiceTimePhase2 = serviceTimePhase2;
             }
         }
     }
@@ -100,8 +140,10 @@ namespace RGZ_IM
         {
             for (int i = 0; i < count; i++)
             {
-                var serviceTime = SimulationUtility.GetServiceTime();
-                queue.Enqueue(new Statistic.Human(timeScale, serviceTime));
+                var orderTime = SimulationUtility.GetOrderTime();
+                var serviceTime = SimulationUtility.GetServiceTime(timeScale);
+
+                queue.Enqueue(new Statistic.Human(timeScale, orderTime, serviceTime));
             }
         }
     }
@@ -149,6 +191,7 @@ namespace RGZ_IM
 
         private Wave wave;
         private InputQueue inputQueue;
+        private Statistic statistic;
 
         private int FreeFlowsCount
         {
@@ -169,8 +212,9 @@ namespace RGZ_IM
             this.extremalCount = extremalCount;
         }
 
-        public void Init(Wave wave, InputQueue inputQueue)
+        public void Init(Wave wave, InputQueue inputQueue, Statistic statistic)
         {
+            this.statistic = statistic;
             this.wave = wave;
             this.inputQueue = inputQueue;
         }
@@ -183,7 +227,7 @@ namespace RGZ_IM
         {
             if ((flows.Count >= FreeFlowsCount) || (inputQueue.QueueLength == 0)) return false;
 
-            while((flows.Count < FreeFlowsCount) || (inputQueue.QueueLength > 0))
+            while((flows.Count < FreeFlowsCount) && (inputQueue.QueueLength > 0))
             {
                 var human = inputQueue.Dequeue();
                 human.SetEndTime(timeScale);
@@ -201,6 +245,7 @@ namespace RGZ_IM
         {
             if (EndTime < 0) return false;
 
+            statistic.AddStatistic(flows[0]);
             flows.RemoveAt(0);
             EndTime = (flows.Count == 0) ? -1 : flows[0].EndTime;
             ToWork(timeScale);
