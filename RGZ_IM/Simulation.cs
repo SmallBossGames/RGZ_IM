@@ -10,7 +10,7 @@ namespace RGZ_IM
     {
         public static Statistic Simulate(double fullTime)
         {
-            var flow = new Flow(15, 5, 6, 7);
+            var flow = new Flow(15, 3, 4, 5);
             var queue = new InputQueue();
             var wave = new Wave();
             var statistic = new Statistic();
@@ -81,7 +81,6 @@ namespace RGZ_IM
             public double ServiceTimePhase2 { get; private set; }
 
             public double EndTime { get; private set; }
-
 
             public void SetEndTime(double timeScale)
             {

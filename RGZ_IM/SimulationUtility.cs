@@ -10,6 +10,8 @@ namespace RGZ_IM
     {
         readonly static Random random = new Random();
 
+        static double R => (double)random.Next(int.MaxValue) / int.MaxValue;
+
         /// <summary>
         /// Время прихода следующей заявки
         /// Равномерный закон распределения
@@ -36,17 +38,13 @@ namespace RGZ_IM
         /// Время до возникновения следующей волны
         /// Равномерный закон распределения
         /// </summary>
-        public static double GetWave() => 360 + PlusMinusWave();
+        public static double GetWave() => 330 + 60 * R;
 
         /// <summary>
         /// Продолжительность волны
         /// </summary>
         /// <returns></returns>
-        public static double GetWaveLength()
-        {
-            if (random.Next(0, 1) == 0) return 90 + 30 * random.NextDouble();
-            else return 90 - 30 * random.NextDouble();
-        }
+        public static double GetWaveLength() => 60 + 60 * R;
 
         /// <summary>
         /// Время обслуживания заявки
@@ -55,8 +53,8 @@ namespace RGZ_IM
         /// <returns></returns>
         public static double GetServiceTime(double time)
         {
-            if (time < 960) return 6.5 + PlusMinusWork(time);
-            else return 11 + PlusMinusWork(time);
+            if (time % 1440 < 960) return 2.8 + 2 * R;
+            else return 7.8 + 2 * R;
         }
 
         /// <summary>
@@ -64,47 +62,12 @@ namespace RGZ_IM
         /// Равномерный закон распределения
         /// </summary>
         /// <returns></returns>
-        public static double GetOrderTime() => 1.5 + PlusMinusOrder() / 2;
-
-        /// <summary>
-        /// Генерация времени разброса заказа заявки
-        /// </summary>
-        /// <returns></returns>
-        static double PlusMinusOrder()
-        {
-            if (random.Next(0, 1) == 0) return random.NextDouble();
-            else return -random.NextDouble();
-        }
+        public static double GetOrderTime() => 2.2 + R;
 
         static double PlusMinus()
         {
             if (random.Next(0, 1) == 0) return 0.322 * random.NextDouble();
             else return -0.322 * random.NextDouble();
         }
-
-        static double PlusMinusWave()
-        {
-            if (random.Next(0, 1) == 0) return 30 * random.NextDouble();
-            else return -30 * random.NextDouble();
-        }
-
-        /// <summary>
-        /// Генерация разброса для времени обслуживания заявки в зависимости от времени суток
-        /// </summary>
-        /// <param Время суток="time"></param>
-        /// <returns></returns>
-        static double PlusMinusWork(double time)
-        {
-            if (time < 960)
-            {
-                if (random.Next(0, 1) == 0) return random.NextDouble();
-                else return -random.NextDouble();
-            }
-            else
-            {
-                if (random.Next(0, 1) == 0) return 2 * random.NextDouble();
-                else return 2 * random.NextDouble();
-            }
-        }        
     }
 }
