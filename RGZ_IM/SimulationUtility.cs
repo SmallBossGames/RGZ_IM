@@ -29,7 +29,9 @@ namespace RGZ_IM
             this.ServiceTimeDefault = ServiceTimeDefault;
             this.ServiceTimeWave = ServiceTimeWave;
             this.OrderTime = OrderTime;
-        }        
+        }
+
+        public SimulationUtility() { }
 
         /// <summary>
         /// Время прихода следующей заявки

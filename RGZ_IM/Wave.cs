@@ -3,6 +3,7 @@
     class Wave : IQuest
     {
         private FlowAlterantive flow;
+        private SimulationUtility utility;
 
         public bool IsWave { get; private set; }
 
@@ -12,13 +13,16 @@
 
         public Wave()
         {
-            IsWave = false;
-            EndTime = SimulationUtility.GetWave();
+            
         }
 
-        public void Init(FlowAlterantive flow)
+        public void Init(FlowAlterantive flow, SimulationUtility utility)
         {
+            this.utility = utility;
             this.flow = flow;
+
+            IsWave = false;
+            EndTime = utility.GetWave();
         }
 
         public bool TryMake(double timeScale)
@@ -26,12 +30,12 @@
             if (IsWave)
             {
                 IsWave = false;
-                EndTime = timeScale + SimulationUtility.GetWave();
+                EndTime = timeScale + utility.GetWave();
             }
             else
             {
                 IsWave = true;
-                EndTime = timeScale + SimulationUtility.GetWaveLength();
+                EndTime = timeScale + utility.GetWaveLength();
             }
 
             flow.ToWork(timeScale);

@@ -6,20 +6,23 @@ namespace RGZ_IM
     {
         private Wave wave;
         private FlowAlterantive flow;
+        private SimulationUtility utility;
 
         private readonly Queue<Statistic.Human> queue = new Queue<Statistic.Human>();
 
         public int QueueLength => queue.Count;
 
-        public void Init(Wave wave, FlowAlterantive flow)
+        public void Init(Wave wave, FlowAlterantive flow, SimulationUtility utility)
         {
+            this.utility = utility;
             this.wave = wave;
             this.flow = flow;
+            EndTime = utility.GetNextPeopleTime(false);
         }
 
         public InputQueue()
         {
-            EndTime = SimulationUtility.GetNextPeopleTime(false);
+            
         }
 
         public double EndTime { get; private set; }
@@ -28,8 +31,8 @@ namespace RGZ_IM
 
         public bool TryMake(double timeScale)
         {
-            EndTime = timeScale + SimulationUtility.GetNextPeopleTime(wave.IsWave);
-            AddPeople(timeScale, SimulationUtility.GetNextPeopleCount(wave.IsWave));
+            EndTime = timeScale + utility.GetNextPeopleTime(wave.IsWave);
+            AddPeople(timeScale, utility.GetNextPeopleCount(wave.IsWave));
             flow.ToWork(timeScale);
             return true;
         }
@@ -40,8 +43,8 @@ namespace RGZ_IM
         {
             for (int i = 0; i < count; i++)
             {
-                var orderTime = SimulationUtility.GetOrderTime();
-                var serviceTime = SimulationUtility.GetServiceTime(timeScale);
+                var orderTime = utility.GetOrderTime();
+                var serviceTime = utility.GetServiceTime(timeScale);
 
                 queue.Enqueue(new Statistic.Human(timeScale, orderTime, serviceTime));
             }

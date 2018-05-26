@@ -15,8 +15,8 @@ namespace RGZ_IM
             var statistic = new Statistic();
 
             flow.Init(wave, queue, statistic);
-            queue.Init(wave, flow);
-            wave.Init(flow);
+            queue.Init(wave, flow, utility);
+            wave.Init(flow, utility);
 
             var timeScale = 0.0;
 

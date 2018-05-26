@@ -20,7 +20,8 @@ namespace RGZ_IM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text));
+            var utility = new SimulationUtility();
+            var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text), utility);
             PeopleCountTextBox.Text = statistic.PeopleCount.ToString();
             MiddleTimeInQueveTextBox.Text = Math.Round(statistic.MiddleInQueueTime, 2).ToString();
             MiddleTimeInPhase1TextBox.Text = Math.Round(statistic.MiddlePhase1Time, 2).ToString();
