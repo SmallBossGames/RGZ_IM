@@ -14,8 +14,8 @@ namespace RGZ_IM
 
         double NextPeopleTime = 1.5;
         double NextPeopleTimeWave = 0.75;
-        double NextWaveTime = 330;
-        double WaveTime = 60;
+        double NextWaveTime = 360;
+        double WaveTime = 90;
         double ServiceTimeDefault = 2.8;
         double ServiceTimeWave = 7.8;
         double OrderTime = 2.2;
@@ -57,13 +57,13 @@ namespace RGZ_IM
         /// Время до возникновения следующей волны
         /// Равномерный закон распределения
         /// </summary>
-        public double GetWave() => NextWaveTime + 60 * R;
+        public double GetWave() => NextWaveTime-30 + 60 * R;
 
         /// <summary>
         /// Продолжительность волны
         /// </summary>
         /// <returns></returns>
-        public double GetWaveLength() => WaveTime + 60 * R;
+        public double GetWaveLength() => WaveTime-30 + 60 * R;
 
         /// <summary>
         /// Время обслуживания заявки
