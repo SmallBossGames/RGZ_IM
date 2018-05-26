@@ -264,7 +264,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 184);
+            this.label12.Location = new System.Drawing.Point(12, 189);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(233, 13);
             this.label12.TabIndex = 23;
@@ -272,7 +272,7 @@
             // 
             // NextPeopleTimeTextBox
             // 
-            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(251, 181);
+            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(251, 184);
             this.NextPeopleTimeTextBox.Name = "NextPeopleTimeTextBox";
             this.NextPeopleTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.NextPeopleTimeTextBox.TabIndex = 24;
