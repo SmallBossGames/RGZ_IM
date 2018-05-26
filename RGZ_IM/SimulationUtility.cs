@@ -12,13 +12,13 @@ namespace RGZ_IM
 
         static double R => (double)random.Next(int.MaxValue) / int.MaxValue;
 
-        double NextPeopleTime = 1.5;
-        double NextPeopleTimeWave = 0.75;
-        double NextWaveTime = 330;
-        double WaveTime = 60;
-        double ServiceTimeDefault = 2.8;
-        double ServiceTimeWave = 7.8;
-        double OrderTime = 2.2;
+        readonly double NextPeopleTime = 1.5;
+        readonly double NextPeopleTimeWave = 0.75;
+        readonly double NextWaveTime = 330;
+        readonly double WaveTime = 60;
+        readonly double ServiceTimeDefault = 2.8;
+        readonly double ServiceTimeWave = 7.8;
+        readonly double OrderTime = 2.2;
 
         public SimulationUtility(double NextPeopleTime, double NextPeopleTimeWave, double NextWaveTime, double WaveTime, double ServiceTimeDefault, double ServiceTimeWave, double OrderTime)
         {

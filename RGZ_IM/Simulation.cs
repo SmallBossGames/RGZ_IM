@@ -7,7 +7,7 @@ namespace RGZ_IM
 {
     static class Simulation
     {
-        public static Statistic Simulate(double fullTime)
+        public static Statistic Simulate(double fullTime, SimulationUtility utility)
         {
             var flow = new FlowAlterantive(15, 3, 4, 5);
             var queue = new InputQueue();
