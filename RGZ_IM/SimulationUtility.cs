@@ -36,10 +36,10 @@ namespace RGZ_IM
         /// Равномерный закон распределения
         /// </summary>
         /// <param name="isWave">Режим волны</param>
-        public static double GetNextPeopleTime(bool isWave)
+        public double GetNextPeopleTime(bool isWave)
         {
-            if (isWave == false) return 1.5 + PlusMinus(); // 0.67 человека в минуту
-            else return 0.75 + PlusMinus();
+            if (isWave == false) return NextPeopleTime + PlusMinus(); // 0.67 человека в минуту
+            else return NextPeopleTimeWave + PlusMinus();
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace RGZ_IM
         /// Нормальный закон распределения
         /// </summary>
         /// <param name="isWave">Режим волны</param>
-        public static int GetNextPeopleCount(bool isWave)
+        public int GetNextPeopleCount(bool isWave)
         {
             if (isWave == false) return random.Next(1, 3);
             else return random.Next(1, 3);
@@ -57,23 +57,23 @@ namespace RGZ_IM
         /// Время до возникновения следующей волны
         /// Равномерный закон распределения
         /// </summary>
-        public static double GetWave() => 330 + 60 * R;
+        public double GetWave() => NextWaveTime + 60 * R;
 
         /// <summary>
         /// Продолжительность волны
         /// </summary>
         /// <returns></returns>
-        public static double GetWaveLength() => 60 + 60 * R;
+        public double GetWaveLength() => WaveTime + 60 * R;
 
         /// <summary>
         /// Время обслуживания заявки
         /// Равномерный закон распределения
         /// </summary>
         /// <returns></returns>
-        public static double GetServiceTime(double time)
+        public double GetServiceTime(double time)
         {
-            if (time % 1440 < 960) return 2.8 + 2 * R;
-            else return 7.8 + 2 * R;
+            if (time % 1440 < 960) return ServiceTimeDefault + 2 * R;
+            else return ServiceTimeWave + 2 * R;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace RGZ_IM
         /// Равномерный закон распределения
         /// </summary>
         /// <returns></returns>
-        public static double GetOrderTime() => 2.2 + R;
+        public double GetOrderTime() => OrderTime + R;
 
         static double PlusMinus()
         {
