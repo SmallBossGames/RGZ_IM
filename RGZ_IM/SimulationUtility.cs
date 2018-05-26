@@ -6,11 +6,30 @@ using System.Threading.Tasks;
 
 namespace RGZ_IM
 {
-    static class SimulationUtility
+    class SimulationUtility
     {
         readonly static Random random = new Random();
 
         static double R => (double)random.Next(int.MaxValue) / int.MaxValue;
+
+        double NextPeopleTime = 1.5;
+        double NextPeopleTimeWave = 0.75;
+        double NextWaveTime = 330;
+        double WaveTime = 60;
+        double ServiceTimeDefault = 2.8;
+        double ServiceTimeWave = 7.8;
+        double OrderTime = 2.2;
+
+        public SimulationUtility(double NextPeopleTime, double NextPeopleTimeWave, double NextWaveTime, double WaveTime, double ServiceTimeDefault, double ServiceTimeWave, double OrderTime)
+        {
+            this.NextPeopleTime = NextPeopleTime;
+            this.NextPeopleTimeWave = NextPeopleTimeWave;
+            this.NextWaveTime = NextWaveTime;
+            this.WaveTime = WaveTime;
+            this.ServiceTimeDefault = ServiceTimeDefault;
+            this.ServiceTimeWave = ServiceTimeWave;
+            this.OrderTime = OrderTime;
+        }        
 
         /// <summary>
         /// Время прихода следующей заявки
