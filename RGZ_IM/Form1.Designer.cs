@@ -39,14 +39,26 @@
             this.MiddleTimeInPhase1TextBox = new System.Windows.Forms.TextBox();
             this.MiddleTimeInPhase2TextBox = new System.Windows.Forms.TextBox();
             this.MiddleTimeInQueveTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ChannelCountTextBox = new System.Windows.Forms.TextBox();
+            this.AccuracyTextBox = new System.Windows.Forms.TextBox();
+            this.ChannelProcentTextBox = new System.Windows.Forms.TextBox();
+            this.ChannelsMiddleTimeWorkTextBox = new System.Windows.Forms.TextBox();
+            this.MiddleRequestTextBox = new System.Windows.Forms.TextBox();
+            this.ChannelMiddleTimeTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(359, 6);
+            this.button1.Location = new System.Drawing.Point(363, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 129);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Симуляция";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -70,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 64);
+            this.label2.Location = new System.Drawing.Point(9, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 13);
             this.label2.TabIndex = 3;
@@ -79,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 38);
+            this.label3.Location = new System.Drawing.Point(9, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 13);
             this.label3.TabIndex = 4;
@@ -88,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 92);
+            this.label4.Location = new System.Drawing.Point(9, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(224, 13);
             this.label4.TabIndex = 5;
@@ -97,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 116);
+            this.label5.Location = new System.Drawing.Point(4, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(229, 13);
             this.label5.TabIndex = 6;
@@ -105,7 +117,7 @@
             // 
             // PeopleCountTextBox
             // 
-            this.PeopleCountTextBox.Location = new System.Drawing.Point(196, 35);
+            this.PeopleCountTextBox.Location = new System.Drawing.Point(187, 82);
             this.PeopleCountTextBox.Name = "PeopleCountTextBox";
             this.PeopleCountTextBox.ReadOnly = true;
             this.PeopleCountTextBox.Size = new System.Drawing.Size(100, 20);
@@ -113,7 +125,7 @@
             // 
             // MiddleTimeInPhase1TextBox
             // 
-            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(242, 87);
+            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(235, 232);
             this.MiddleTimeInPhase1TextBox.Name = "MiddleTimeInPhase1TextBox";
             this.MiddleTimeInPhase1TextBox.ReadOnly = true;
             this.MiddleTimeInPhase1TextBox.Size = new System.Drawing.Size(100, 20);
@@ -121,7 +133,7 @@
             // 
             // MiddleTimeInPhase2TextBox
             // 
-            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(242, 113);
+            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(235, 258);
             this.MiddleTimeInPhase2TextBox.Name = "MiddleTimeInPhase2TextBox";
             this.MiddleTimeInPhase2TextBox.ReadOnly = true;
             this.MiddleTimeInPhase2TextBox.Size = new System.Drawing.Size(100, 20);
@@ -129,17 +141,129 @@
             // 
             // MiddleTimeInQueveTextBox
             // 
-            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(218, 61);
+            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(215, 206);
             this.MiddleTimeInQueveTextBox.Name = "MiddleTimeInQueveTextBox";
             this.MiddleTimeInQueveTextBox.ReadOnly = true;
             this.MiddleTimeInQueveTextBox.Size = new System.Drawing.Size(100, 20);
             this.MiddleTimeInQueveTextBox.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(227, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Введите количество работающих каналов: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Загрузка каналов(в процентах):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 159);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(230, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Среднее время прихода заявок(в минутах): ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(232, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Среднее время работы каналов(в минутах): ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 183);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(226, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Среднее время работы канала(в минутах): ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 59);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(161, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Введите точность симуляции: ";
+            // 
+            // ChannelCountTextBox
+            // 
+            this.ChannelCountTextBox.Location = new System.Drawing.Point(245, 32);
+            this.ChannelCountTextBox.Name = "ChannelCountTextBox";
+            this.ChannelCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ChannelCountTextBox.TabIndex = 2;
+            // 
+            // AccuracyTextBox
+            // 
+            this.AccuracyTextBox.Location = new System.Drawing.Point(179, 56);
+            this.AccuracyTextBox.Name = "AccuracyTextBox";
+            this.AccuracyTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AccuracyTextBox.TabIndex = 3;
+            // 
+            // ChannelProcentTextBox
+            // 
+            this.ChannelProcentTextBox.Location = new System.Drawing.Point(187, 106);
+            this.ChannelProcentTextBox.Name = "ChannelProcentTextBox";
+            this.ChannelProcentTextBox.ReadOnly = true;
+            this.ChannelProcentTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ChannelProcentTextBox.TabIndex = 19;
+            // 
+            // ChannelsMiddleTimeWorkTextBox
+            // 
+            this.ChannelsMiddleTimeWorkTextBox.Location = new System.Drawing.Point(245, 130);
+            this.ChannelsMiddleTimeWorkTextBox.Name = "ChannelsMiddleTimeWorkTextBox";
+            this.ChannelsMiddleTimeWorkTextBox.ReadOnly = true;
+            this.ChannelsMiddleTimeWorkTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ChannelsMiddleTimeWorkTextBox.TabIndex = 20;
+            // 
+            // MiddleRequestTextBox
+            // 
+            this.MiddleRequestTextBox.Location = new System.Drawing.Point(235, 156);
+            this.MiddleRequestTextBox.Name = "MiddleRequestTextBox";
+            this.MiddleRequestTextBox.ReadOnly = true;
+            this.MiddleRequestTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MiddleRequestTextBox.TabIndex = 21;
+            // 
+            // ChannelMiddleTimeTextBox
+            // 
+            this.ChannelMiddleTimeTextBox.Location = new System.Drawing.Point(241, 182);
+            this.ChannelMiddleTimeTextBox.Name = "ChannelMiddleTimeTextBox";
+            this.ChannelMiddleTimeTextBox.ReadOnly = true;
+            this.ChannelMiddleTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ChannelMiddleTimeTextBox.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 143);
+            this.ClientSize = new System.Drawing.Size(615, 283);
+            this.Controls.Add(this.ChannelMiddleTimeTextBox);
+            this.Controls.Add(this.MiddleRequestTextBox);
+            this.Controls.Add(this.ChannelsMiddleTimeWorkTextBox);
+            this.Controls.Add(this.ChannelProcentTextBox);
+            this.Controls.Add(this.AccuracyTextBox);
+            this.Controls.Add(this.ChannelCountTextBox);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.MiddleTimeInQueveTextBox);
             this.Controls.Add(this.MiddleTimeInPhase2TextBox);
             this.Controls.Add(this.MiddleTimeInPhase1TextBox);
@@ -171,6 +295,18 @@
         private System.Windows.Forms.TextBox MiddleTimeInPhase1TextBox;
         private System.Windows.Forms.TextBox MiddleTimeInPhase2TextBox;
         private System.Windows.Forms.TextBox MiddleTimeInQueveTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox ChannelCountTextBox;
+        private System.Windows.Forms.TextBox AccuracyTextBox;
+        private System.Windows.Forms.TextBox ChannelProcentTextBox;
+        private System.Windows.Forms.TextBox ChannelsMiddleTimeWorkTextBox;
+        private System.Windows.Forms.TextBox MiddleRequestTextBox;
+        private System.Windows.Forms.TextBox ChannelMiddleTimeTextBox;
     }
 }
 
