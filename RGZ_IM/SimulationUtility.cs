@@ -12,13 +12,13 @@ namespace RGZ_IM
 
         static double R => (double)random.Next(int.MaxValue) / int.MaxValue;
 
-        readonly double NextPeopleTime = 1.5;
-        readonly double NextPeopleTimeWave = 0.75;
-        readonly double NextWaveTime = 330;
-        readonly double WaveTime = 60;
-        readonly double ServiceTimeDefault = 2.8;
-        readonly double ServiceTimeWave = 7.8;
-        readonly double OrderTime = 2.2;
+        double NextPeopleTime = 1.5;
+        double NextPeopleTimeWave = 0.75;
+        double NextWaveTime = 360;
+        double WaveTime = 90;
+        double ServiceTimeDefault = 2.8;
+        double ServiceTimeWave = 7.8;
+        double OrderTime = 2.2;
 
         public SimulationUtility(double NextPeopleTime, double NextPeopleTimeWave, double NextWaveTime, double WaveTime, double ServiceTimeDefault, double ServiceTimeWave, double OrderTime)
         {
@@ -29,9 +29,7 @@ namespace RGZ_IM
             this.ServiceTimeDefault = ServiceTimeDefault;
             this.ServiceTimeWave = ServiceTimeWave;
             this.OrderTime = OrderTime;
-        }
-
-        public SimulationUtility() { }
+        }        
 
         /// <summary>
         /// Время прихода следующей заявки
@@ -59,13 +57,13 @@ namespace RGZ_IM
         /// Время до возникновения следующей волны
         /// Равномерный закон распределения
         /// </summary>
-        public double GetWave() => NextWaveTime + 60 * R;
+        public double GetWave() => NextWaveTime-30 + 60 * R;
 
         /// <summary>
         /// Продолжительность волны
         /// </summary>
         /// <returns></returns>
-        public double GetWaveLength() => WaveTime + 60 * R;
+        public double GetWaveLength() => WaveTime-30 + 60 * R;
 
         /// <summary>
         /// Время обслуживания заявки
