@@ -43,7 +43,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(311, 6);
+            this.button1.Location = new System.Drawing.Point(359, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 129);
             this.button1.TabIndex = 0;
@@ -56,13 +56,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 13);
+            this.label1.Size = new System.Drawing.Size(204, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Введите время симуляции: ";
+            this.label1.Text = "Введите время симуляции(в минутах): ";
             // 
             // FullTimeTextBox
             // 
-            this.FullTimeTextBox.Location = new System.Drawing.Point(166, 6);
+            this.FullTimeTextBox.Location = new System.Drawing.Point(222, 6);
             this.FullTimeTextBox.Name = "FullTimeTextBox";
             this.FullTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.FullTimeTextBox.TabIndex = 1;
@@ -72,9 +72,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 13);
+            this.label2.Size = new System.Drawing.Size(200, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Среднее время в очереди: ";
+            this.label2.Text = "Среднее время в очереди(в минутах): ";
             // 
             // label3
             // 
@@ -90,22 +90,22 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 13);
+            this.label4.Size = new System.Drawing.Size(224, 13);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Среднее время в первой фазе: ";
+            this.label4.Text = "Среднее время в первой фазе(в минутах): ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 13);
+            this.label5.Size = new System.Drawing.Size(229, 13);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Среднее время во второй фазе: ";
+            this.label5.Text = "Среднее время во второй фазе(в минутах): ";
             // 
             // PeopleCountTextBox
             // 
-            this.PeopleCountTextBox.Location = new System.Drawing.Point(196, 32);
+            this.PeopleCountTextBox.Location = new System.Drawing.Point(196, 35);
             this.PeopleCountTextBox.Name = "PeopleCountTextBox";
             this.PeopleCountTextBox.ReadOnly = true;
             this.PeopleCountTextBox.Size = new System.Drawing.Size(100, 20);
@@ -113,7 +113,7 @@
             // 
             // MiddleTimeInPhase1TextBox
             // 
-            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(186, 89);
+            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(242, 87);
             this.MiddleTimeInPhase1TextBox.Name = "MiddleTimeInPhase1TextBox";
             this.MiddleTimeInPhase1TextBox.ReadOnly = true;
             this.MiddleTimeInPhase1TextBox.Size = new System.Drawing.Size(100, 20);
@@ -121,7 +121,7 @@
             // 
             // MiddleTimeInPhase2TextBox
             // 
-            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(191, 115);
+            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(242, 113);
             this.MiddleTimeInPhase2TextBox.Name = "MiddleTimeInPhase2TextBox";
             this.MiddleTimeInPhase2TextBox.ReadOnly = true;
             this.MiddleTimeInPhase2TextBox.Size = new System.Drawing.Size(100, 20);
@@ -129,7 +129,7 @@
             // 
             // MiddleTimeInQueveTextBox
             // 
-            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(162, 61);
+            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(218, 61);
             this.MiddleTimeInQueveTextBox.Name = "MiddleTimeInQueveTextBox";
             this.MiddleTimeInQueveTextBox.ReadOnly = true;
             this.MiddleTimeInQueveTextBox.Size = new System.Drawing.Size(100, 20);
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 143);
+            this.ClientSize = new System.Drawing.Size(610, 143);
             this.Controls.Add(this.MiddleTimeInQueveTextBox);
             this.Controls.Add(this.MiddleTimeInPhase2TextBox);
             this.Controls.Add(this.MiddleTimeInPhase1TextBox);

@@ -22,9 +22,9 @@ namespace RGZ_IM
         {
             var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text));
             PeopleCountTextBox.Text = statistic.PeopleCount.ToString();
-            MiddleTimeInQueveTextBox.Text = statistic.MiddleInQueueTime.ToString();
-            MiddleTimeInPhase1TextBox.Text = statistic.MiddlePhase1Time.ToString();
-            MiddleTimeInPhase2TextBox.Text = statistic.MiddlePhase2Time.ToString();
+            MiddleTimeInQueveTextBox.Text = Math.Round(statistic.MiddleInQueueTime, 2).ToString();
+            MiddleTimeInPhase1TextBox.Text = Math.Round(statistic.MiddlePhase1Time, 2).ToString();
+            MiddleTimeInPhase2TextBox.Text = Math.Round(statistic.MiddlePhase2Time, 2).ToString();
         }
     }
 }
