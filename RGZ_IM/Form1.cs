@@ -59,21 +59,21 @@ namespace RGZ_IM
 
             double accuracy = Convert.ToDouble(AccuracyTextBox.Text);
             double kvantil = Convert.ToDouble(KvantilTextBox.Text);
-            double people = 0;
+            double middleInQueueTime = 0;
             double dispersion = 0;
             double itCountFinal = 0;
 
-            double[] peopleS = new double[itCount];
+            double[] middleInQueueTimeS = new double[itCount];
 
             for (int i = 0; i < itCount; i++)
             {
                 var statistic = Simulation.Simulate(Convert.ToDouble(FullTimeTextBox.Text), utility);
-                var peopleCount = statistic.MiddleInQueueTime;
-                peopleS[i] = peopleCount;
-                people += peopleCount / itCount;
+                var middle = statistic.MiddleInQueueTime;
+                middleInQueueTimeS[i] = middle;
+                middleInQueueTime += middle / itCount;
             }
 
-            for (int i = 0; i < itCount; i++) dispersion += (peopleS[i] * peopleS[i] - people * people);
+            for (int i = 0; i < itCount; i++) dispersion += (middleInQueueTimeS[i] * middleInQueueTimeS[i] - middleInQueueTime * middleInQueueTime);
 
             dispersion /= itCount - 1;
 
