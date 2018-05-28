@@ -46,7 +46,7 @@
             this.Column3});
             this.TableOfChannels.Location = new System.Drawing.Point(12, 12);
             this.TableOfChannels.Name = "TableOfChannels";
-            this.TableOfChannels.Size = new System.Drawing.Size(445, 274);
+            this.TableOfChannels.Size = new System.Drawing.Size(443, 274);
             this.TableOfChannels.TabIndex = 0;
             // 
             // Column1
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 300);
+            this.ClientSize = new System.Drawing.Size(471, 300);
             this.Controls.Add(this.TableOfChannels);
             this.Name = "Table";
             this.Text = "Table";
