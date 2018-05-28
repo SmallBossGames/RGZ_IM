@@ -45,6 +45,7 @@ namespace RGZ_IM
                 }
             }
 
+            IterationCountTextBox.Text = itCount.ToString();
             PeopleCountTextBox.Text = Math.Round((peopleCount / itCount), 2).ToString();
             MiddleTimeInQueveTextBox.Text = Math.Round((MiddleInQueue / itCount), 2).ToString();
             MiddleTimeInPhase1TextBox.Text = Math.Round((MiddleInPhase1Time / itCount), 2).ToString();
