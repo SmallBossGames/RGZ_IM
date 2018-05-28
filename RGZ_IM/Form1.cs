@@ -21,12 +21,16 @@ namespace RGZ_IM
         {
             double itCount = 0;
             var utility = new SimulationUtility(Convert.ToDouble(NextPeopleTimeTextBox.Text), Convert.ToDouble(NextPeopleTimeTextBox.Text) / 2, Convert.ToDouble(NextWaveTimeTextBox.Text), Convert.ToDouble(WaveTimeTextBox.Text), Convert.ToDouble(MiddleServiceTimeTextBox.Text), Convert.ToDouble(MiddleServiceWaveTimeTextBox.Text), Convert.ToDouble(OrderTimeTextBox.Text));
+            utility.DefaultChannelCount = Convert.ToInt32(ChannelCountTextBox.Text);
+            utility.WaveChannelCount = Convert.ToInt32(ChannelCountTextBox.Text) + 1;
+            utility.ExtremalChannelCount = Convert.ToInt32(ChannelCountTextBox.Text) + 2;
             int peopleCount = 0;
             double MiddleInQueue = 0;
             double MiddleInPhase1Time = 0;
             double MiddleInPhase2Time = 0;
-            double InWorkTime = 0;
-            double ActiveTime = 0;
+            var table = new Table();
+           // double InWorkTime = 0;
+           // double ActiveTime = 0;
 
             itCount = WriteData(utility);
 
@@ -38,20 +42,25 @@ namespace RGZ_IM
                 MiddleInPhase1Time += statistic.MiddlePhase1Time;
                 MiddleInPhase2Time += statistic.MiddlePhase2Time;
 
+                int j = 1;
+
                 foreach (var a in statistic.Flows)
                 {
-                    InWorkTime += a.InWorkTime;
-                    ActiveTime += a.ActiveTime;
+                    table.AddData(j, a.InWorkTime, a.ActiveTime, (a.InWorkTime / Convert.ToDouble(FullTimeTextBox.Text)));
+                    //  InWorkTime += a.InWorkTime;
+                    //  ActiveTime += a.ActiveTime;
+                    j++;
                 }
             }
 
+            table.Show();
             IterationCountTextBox.Text = itCount.ToString();
             PeopleCountTextBox.Text = Math.Round((peopleCount / itCount), 2).ToString();
             MiddleTimeInQueveTextBox.Text = Math.Round((MiddleInQueue / itCount), 2).ToString();
             MiddleTimeInPhase1TextBox.Text = Math.Round((MiddleInPhase1Time / itCount), 2).ToString();
             MiddleTimeInPhase2TextBox.Text = Math.Round((MiddleInPhase2Time / itCount), 2).ToString();
-            ChannelsMiddleTimeWorkTextBox.Text = Math.Round((InWorkTime / itCount), 2).ToString();
-            ChannelMiddleTimeTextBox.Text = Math.Round((ActiveTime / itCount), 2).ToString();
+            // ChannelsMiddleTimeWorkTextBox.Text = Math.Round((InWorkTime / itCount), 2).ToString();
+            // ChannelMiddleTimeTextBox.Text = Math.Round((ActiveTime / itCount), 2).ToString();
         }
 
         double WriteData(SimulationUtility utility)

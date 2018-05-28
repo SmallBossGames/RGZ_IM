@@ -76,7 +76,7 @@
             this.button1.Location = new System.Drawing.Point(12, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(777, 39);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Симуляция";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -399,7 +399,7 @@
             this.KvantilTextBox.Location = new System.Drawing.Point(81, 106);
             this.KvantilTextBox.Name = "KvantilTextBox";
             this.KvantilTextBox.Size = new System.Drawing.Size(100, 20);
-            this.KvantilTextBox.TabIndex = 38;
+            this.KvantilTextBox.TabIndex = 4;
             // 
             // label21
             // 
