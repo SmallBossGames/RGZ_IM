@@ -29,7 +29,7 @@ namespace RGZ_IM
             this.ServiceTimeDefault = ServiceTimeDefault;
             this.ServiceTimeWave = ServiceTimeWave;
             this.OrderTime = OrderTime;
-        }        
+        }
 
         /// <summary>
         /// Время прихода следующей заявки
@@ -57,13 +57,13 @@ namespace RGZ_IM
         /// Время до возникновения следующей волны
         /// Равномерный закон распределения
         /// </summary>
-        public double GetWave() => NextWaveTime-30 + 60 * R;
+        public double GetWave() => NextWaveTime - 30 + 60 * R;
 
         /// <summary>
         /// Продолжительность волны
         /// </summary>
         /// <returns></returns>
-        public double GetWaveLength() => WaveTime-30 + 60 * R;
+        public double GetWaveLength() => WaveTime - 30 + 60 * R;
 
         /// <summary>
         /// Время обслуживания заявки

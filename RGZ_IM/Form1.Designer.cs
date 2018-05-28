@@ -65,11 +65,13 @@
             this.OrderTimeTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.KvantilTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 261);
+            this.button1.Location = new System.Drawing.Point(12, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(777, 39);
             this.button1.TabIndex = 4;
@@ -193,27 +195,27 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(430, 81);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(235, 13);
+            this.label9.Size = new System.Drawing.Size(227, 13);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Среднее время работы каналов (в минутах): ";
+            this.label9.Text = "Общее время работы каналов (в минутах): ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(422, 189);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(229, 13);
+            this.label10.Size = new System.Drawing.Size(184, 13);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Среднее время работы канала (в минутах): ";
+            this.label10.Text = "Время работы канала (в минутах): ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 82);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(218, 13);
+            this.label11.Size = new System.Drawing.Size(118, 13);
             this.label11.TabIndex = 16;
-            this.label11.Text = "Точность симуляции (определись в чём): ";
+            this.label11.Text = "Точность симуляции: ";
             // 
             // ChannelCountTextBox
             // 
@@ -224,7 +226,7 @@
             // 
             // AccuracyTextBox
             // 
-            this.AccuracyTextBox.Location = new System.Drawing.Point(236, 79);
+            this.AccuracyTextBox.Location = new System.Drawing.Point(136, 77);
             this.AccuracyTextBox.Name = "AccuracyTextBox";
             this.AccuracyTextBox.Size = new System.Drawing.Size(100, 20);
             this.AccuracyTextBox.TabIndex = 3;
@@ -255,7 +257,7 @@
             // 
             // ChannelMiddleTimeTextBox
             // 
-            this.ChannelMiddleTimeTextBox.Location = new System.Drawing.Point(657, 184);
+            this.ChannelMiddleTimeTextBox.Location = new System.Drawing.Point(612, 184);
             this.ChannelMiddleTimeTextBox.Name = "ChannelMiddleTimeTextBox";
             this.ChannelMiddleTimeTextBox.ReadOnly = true;
             this.ChannelMiddleTimeTextBox.Size = new System.Drawing.Size(100, 20);
@@ -264,7 +266,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 189);
+            this.label12.Location = new System.Drawing.Point(12, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(233, 13);
             this.label12.TabIndex = 23;
@@ -272,7 +274,7 @@
             // 
             // NextPeopleTimeTextBox
             // 
-            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(251, 184);
+            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(251, 205);
             this.NextPeopleTimeTextBox.Name = "NextPeopleTimeTextBox";
             this.NextPeopleTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.NextPeopleTimeTextBox.TabIndex = 24;
@@ -281,7 +283,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 212);
+            this.label13.Location = new System.Drawing.Point(12, 234);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(236, 13);
             this.label13.TabIndex = 25;
@@ -289,7 +291,7 @@
             // 
             // NextWaveTimeTextBox
             // 
-            this.NextWaveTimeTextBox.Location = new System.Drawing.Point(254, 209);
+            this.NextWaveTimeTextBox.Location = new System.Drawing.Point(254, 231);
             this.NextWaveTimeTextBox.Name = "NextWaveTimeTextBox";
             this.NextWaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.NextWaveTimeTextBox.TabIndex = 26;
@@ -298,7 +300,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 236);
+            this.label14.Location = new System.Drawing.Point(12, 260);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(255, 13);
             this.label14.TabIndex = 27;
@@ -306,7 +308,7 @@
             // 
             // WaveTimeTextBox
             // 
-            this.WaveTimeTextBox.Location = new System.Drawing.Point(271, 233);
+            this.WaveTimeTextBox.Location = new System.Drawing.Point(271, 257);
             this.WaveTimeTextBox.Name = "WaveTimeTextBox";
             this.WaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.WaveTimeTextBox.TabIndex = 28;
@@ -315,7 +317,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 109);
+            this.label15.Location = new System.Drawing.Point(12, 130);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(226, 13);
             this.label15.TabIndex = 29;
@@ -324,7 +326,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(12, 133);
+            this.label16.Location = new System.Drawing.Point(12, 154);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(267, 13);
             this.label16.TabIndex = 30;
@@ -332,7 +334,7 @@
             // 
             // MiddleServiceTimeTextBox
             // 
-            this.MiddleServiceTimeTextBox.Location = new System.Drawing.Point(236, 106);
+            this.MiddleServiceTimeTextBox.Location = new System.Drawing.Point(236, 127);
             this.MiddleServiceTimeTextBox.Name = "MiddleServiceTimeTextBox";
             this.MiddleServiceTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.MiddleServiceTimeTextBox.TabIndex = 31;
@@ -340,7 +342,7 @@
             // 
             // MiddleServiceWaveTimeTextBox
             // 
-            this.MiddleServiceWaveTimeTextBox.Location = new System.Drawing.Point(284, 130);
+            this.MiddleServiceWaveTimeTextBox.Location = new System.Drawing.Point(285, 151);
             this.MiddleServiceWaveTimeTextBox.Name = "MiddleServiceWaveTimeTextBox";
             this.MiddleServiceWaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.MiddleServiceWaveTimeTextBox.TabIndex = 32;
@@ -349,7 +351,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 161);
+            this.label17.Location = new System.Drawing.Point(12, 180);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(254, 13);
             this.label17.TabIndex = 33;
@@ -357,7 +359,7 @@
             // 
             // OrderTimeTextBox
             // 
-            this.OrderTimeTextBox.Location = new System.Drawing.Point(271, 158);
+            this.OrderTimeTextBox.Location = new System.Drawing.Point(271, 177);
             this.OrderTimeTextBox.Name = "OrderTimeTextBox";
             this.OrderTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.OrderTimeTextBox.TabIndex = 34;
@@ -381,11 +383,29 @@
             this.label19.TabIndex = 36;
             this.label19.Text = "Результаты симуляции: ";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(14, 109);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 13);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Квантиль: ";
+            // 
+            // KvantilTextBox
+            // 
+            this.KvantilTextBox.Location = new System.Drawing.Point(81, 106);
+            this.KvantilTextBox.Name = "KvantilTextBox";
+            this.KvantilTextBox.Size = new System.Drawing.Size(100, 20);
+            this.KvantilTextBox.TabIndex = 38;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 306);
+            this.ClientSize = new System.Drawing.Size(795, 335);
+            this.Controls.Add(this.KvantilTextBox);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.OrderTimeTextBox);
@@ -469,6 +489,8 @@
         private System.Windows.Forms.TextBox OrderTimeTextBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox KvantilTextBox;
     }
 }
 
