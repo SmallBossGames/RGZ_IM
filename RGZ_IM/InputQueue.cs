@@ -7,16 +7,18 @@ namespace RGZ_IM
         private Wave wave;
         private FlowAlterantive flow;
         private SimulationUtility utility;
+        private Statistic statistic;
 
         private readonly Queue<Statistic.Human> queue = new Queue<Statistic.Human>();
 
         public int QueueLength => queue.Count;
 
-        public void Init(Wave wave, FlowAlterantive flow, SimulationUtility utility)
+        public void Init(Wave wave, FlowAlterantive flow, SimulationUtility utility, Statistic statistic)
         {
             this.utility = utility;
             this.wave = wave;
             this.flow = flow;
+            this.statistic = statistic;
             EndTime = utility.GetNextPeopleTime(false);
         }
 
@@ -45,7 +47,7 @@ namespace RGZ_IM
             {
                 var orderTime = utility.GetOrderTime();
                 var serviceTime = utility.GetServiceTime(timeScale);
-
+                statistic.IncFullPeopleCount();
                 queue.Enqueue(new Statistic.Human(timeScale, orderTime, serviceTime));
             }
         }

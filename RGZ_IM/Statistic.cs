@@ -12,6 +12,8 @@ namespace RGZ_IM
 
         public int PeopleCount { get; private set; }
 
+        public int FullPeopleCount { get; private set; }
+
         public IReadOnlyCollection<IReadOnlyChannel> Flows { get; set; }
 
         public double MiddlePhase1Time => phase1Time / PeopleCount;
@@ -26,7 +28,11 @@ namespace RGZ_IM
             phase1Time = 0.0;
             phase2Time = 0.0;
             inQueueTime = 0.0;
+            FullPeopleCount = 0;
+            PeopleCount = 0;
         }
+
+        public void IncFullPeopleCount() => FullPeopleCount++;
 
         public void AddStatistic(Human human)
         {
