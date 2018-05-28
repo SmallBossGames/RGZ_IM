@@ -51,6 +51,7 @@ namespace RGZ_IM
                     table.AddData(j, a.InWorkTime, a.ActiveTime, (a.InWorkTime / Convert.ToDouble(FullTimeTextBox.Text)));
                     InWorkTime += a.InWorkTime;
                     //  ActiveTime += a.ActiveTime;
+                    //  ActiveTime += a.ActiveTime;
                     j++;
                 }
             }
