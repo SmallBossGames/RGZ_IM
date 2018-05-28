@@ -67,6 +67,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.KvantilTextBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.IterationCountTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -399,11 +401,30 @@
             this.KvantilTextBox.Size = new System.Drawing.Size(100, 20);
             this.KvantilTextBox.TabIndex = 38;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(431, 238);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(95, 13);
+            this.label21.TabIndex = 39;
+            this.label21.Text = "Число итераций: ";
+            // 
+            // IterationCountTextBox
+            // 
+            this.IterationCountTextBox.Location = new System.Drawing.Point(532, 235);
+            this.IterationCountTextBox.Name = "IterationCountTextBox";
+            this.IterationCountTextBox.ReadOnly = true;
+            this.IterationCountTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IterationCountTextBox.TabIndex = 40;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 335);
+            this.Controls.Add(this.IterationCountTextBox);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.KvantilTextBox);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -491,6 +512,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox KvantilTextBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox IterationCountTextBox;
     }
 }
 
