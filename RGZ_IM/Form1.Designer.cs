@@ -56,13 +56,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.NextWaveTimeTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.WaveTimeTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.MiddleServiceTimeTextBox = new System.Windows.Forms.TextBox();
+            this.MiddleServiceWaveTimeTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.OrderTimeTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -304,13 +304,13 @@
             this.label14.TabIndex = 27;
             this.label14.Text = "Средняя продолжительность волны (в минутах): ";
             // 
-            // textBox1
+            // WaveTimeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 28;
-            this.textBox1.Text = "90";
+            this.WaveTimeTextBox.Location = new System.Drawing.Point(271, 233);
+            this.WaveTimeTextBox.Name = "WaveTimeTextBox";
+            this.WaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.WaveTimeTextBox.TabIndex = 28;
+            this.WaveTimeTextBox.Text = "90";
             // 
             // label15
             // 
@@ -330,21 +330,21 @@
             this.label16.TabIndex = 30;
             this.label16.Text = "Среднее время обслуживания в волну (в минутах): ";
             // 
-            // textBox2
+            // MiddleServiceTimeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(236, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 31;
-            this.textBox2.Text = "2,8";
+            this.MiddleServiceTimeTextBox.Location = new System.Drawing.Point(236, 106);
+            this.MiddleServiceTimeTextBox.Name = "MiddleServiceTimeTextBox";
+            this.MiddleServiceTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MiddleServiceTimeTextBox.TabIndex = 31;
+            this.MiddleServiceTimeTextBox.Text = "2,8";
             // 
-            // textBox3
+            // MiddleServiceWaveTimeTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(284, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 32;
-            this.textBox3.Text = "7,8";
+            this.MiddleServiceWaveTimeTextBox.Location = new System.Drawing.Point(284, 130);
+            this.MiddleServiceWaveTimeTextBox.Name = "MiddleServiceWaveTimeTextBox";
+            this.MiddleServiceWaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MiddleServiceWaveTimeTextBox.TabIndex = 32;
+            this.MiddleServiceWaveTimeTextBox.Text = "7,8";
             // 
             // label17
             // 
@@ -355,13 +355,13 @@
             this.label17.TabIndex = 33;
             this.label17.Text = "Среднее время совершения заказа (в минутах): ";
             // 
-            // textBox4
+            // OrderTimeTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(271, 158);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 34;
-            this.textBox4.Text = "2,2";
+            this.OrderTimeTextBox.Location = new System.Drawing.Point(271, 158);
+            this.OrderTimeTextBox.Name = "OrderTimeTextBox";
+            this.OrderTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.OrderTimeTextBox.TabIndex = 34;
+            this.OrderTimeTextBox.Text = "2,2";
             // 
             // label18
             // 
@@ -388,13 +388,13 @@
             this.ClientSize = new System.Drawing.Size(801, 306);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.OrderTimeTextBox);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.MiddleServiceWaveTimeTextBox);
+            this.Controls.Add(this.MiddleServiceTimeTextBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.WaveTimeTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.NextWaveTimeTextBox);
             this.Controls.Add(this.label13);
@@ -460,13 +460,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox NextWaveTimeTextBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox WaveTimeTextBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox MiddleServiceTimeTextBox;
+        private System.Windows.Forms.TextBox MiddleServiceWaveTimeTextBox;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox OrderTimeTextBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
     }
