@@ -20,6 +20,10 @@ namespace RGZ_IM
         readonly double ServiceTimeWave = 7.8;
         readonly double OrderTime = 2.2;
 
+        public int DefaultChannelCount { get; private set; } = 3;
+        public int WaveChannelCount { get; private set; } = 4;
+        public int ExtremalChannelCount { get; private set; } = 5;
+
         public SimulationUtility(double NextPeopleTime, double NextPeopleTimeWave, double NextWaveTime, double WaveTime, double ServiceTimeDefault, double ServiceTimeWave, double OrderTime)
         {
             this.NextPeopleTime = NextPeopleTime;

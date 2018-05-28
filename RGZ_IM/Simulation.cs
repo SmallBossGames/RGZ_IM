@@ -9,12 +9,12 @@ namespace RGZ_IM
     {
         public static Statistic Simulate(double fullTime, SimulationUtility utility)
         {
-            var flow = new FlowAlterantive(15, 3, 4, 5);
+            var flow = new FlowAlterantive(15);
             var queue = new InputQueue();
             var wave = new Wave();
             var statistic = new Statistic();
 
-            flow.Init(wave, queue, statistic);
+            flow.Init(wave, queue, statistic, utility);
             queue.Init(wave, flow, utility);
             wave.Init(flow, utility);
 

@@ -8,38 +8,34 @@ namespace RGZ_IM
     {
         private readonly List<Statistic.Human> flows = new List<Statistic.Human>();
         private readonly int criticalQueueSize;
-        private readonly int defaultCount;
-        private readonly int waveCount;
-        private readonly int extremalCount;
 
         private Wave wave;
         private InputQueue inputQueue;
         private Statistic statistic;
+        private SimulationUtility utility;
 
         private int FreeFlowsCount
         {
             get
             {
-                var retValue = defaultCount;
-                if (wave.IsWave) retValue = waveCount;
-                if (inputQueue.QueueLength > criticalQueueSize) retValue = extremalCount;
+                var retValue = utility.DefaultChannelCount;
+                if (wave.IsWave) retValue = utility.WaveChannelCount;
+                if (inputQueue.QueueLength > criticalQueueSize) retValue = utility.ExtremalChannelCount;
                 return retValue;
             }
         }
 
-        public Flow(int criticalQueueSize, int defaultCount, int waveCount, int extremalCount)
+        public Flow(int criticalQueueSize)
         {
             this.criticalQueueSize = criticalQueueSize;
-            this.defaultCount = defaultCount;
-            this.waveCount = waveCount;
-            this.extremalCount = extremalCount;
         }
 
-        public void Init(Wave wave, InputQueue inputQueue, Statistic statistic)
+        public void Init(Wave wave, InputQueue inputQueue, Statistic statistic, SimulationUtility utility)
         {
             this.statistic = statistic;
             this.wave = wave;
             this.inputQueue = inputQueue;
+            this.utility = utility;
         }
 
         public double EndTime { get; private set; } = -1.0;
@@ -80,15 +76,13 @@ namespace RGZ_IM
 
     class FlowAlterantive : IQuest
     {
-        private readonly ChannelList channelList;
+        private ChannelList channelList;
         private readonly int criticalQueueSize;
-        private readonly int defaultCount;
-        private readonly int waveCount;
-        private readonly int extremalCount;
 
         private Wave wave;
         private InputQueue inputQueue;
         private Statistic statistic;
+        private SimulationUtility utility;
 
         private double lastAccessTime = 0.0;
 
@@ -96,27 +90,25 @@ namespace RGZ_IM
         {
             get
             {
-                var retValue = defaultCount;
-                if (wave.IsWave) retValue = waveCount;
-                if (inputQueue.QueueLength > criticalQueueSize) retValue = extremalCount;
+                var retValue = utility.DefaultChannelCount;
+                if (wave.IsWave) retValue = utility.WaveChannelCount;
+                if (inputQueue.QueueLength > criticalQueueSize) retValue = utility.ExtremalChannelCount;
                 return retValue;
             }
         }
 
-        public FlowAlterantive(int criticalQueueSize, int defaultCount, int waveCount, int extremalCount)
+        public FlowAlterantive(int criticalQueueSize)
         {
             this.criticalQueueSize = criticalQueueSize;
-            this.defaultCount = defaultCount;
-            this.waveCount = waveCount;
-            this.extremalCount = extremalCount;
-            channelList = new ChannelList(extremalCount);
         }
 
-        public void Init(Wave wave, InputQueue inputQueue, Statistic statistic)
+        public void Init(Wave wave, InputQueue inputQueue, Statistic statistic, SimulationUtility utility)
         {
             this.statistic = statistic;
             this.wave = wave;
             this.inputQueue = inputQueue;
+            this.utility = utility;
+            channelList = new ChannelList(utility.ExtremalChannelCount);
             statistic.Flows = channelList.GetChannels;
         }
 
