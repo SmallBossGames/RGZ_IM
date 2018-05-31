@@ -29,6 +29,7 @@ namespace RGZ_IM
             double MiddleInQueue = 0;
             double MiddleInPhase1Time = 0;
             double MiddleInPhase2Time = 0;
+            double intervals = 0;
             var table = new Table();
             double InWorkTime = 0;
             // double ActiveTime = 0;
@@ -43,6 +44,7 @@ namespace RGZ_IM
                 MiddleInQueue += statistic.MiddleInQueueTime;
                 MiddleInPhase1Time += statistic.MiddlePhase1Time;
                 MiddleInPhase2Time += statistic.MiddlePhase2Time;
+                intervals += statistic.IntervalCount;
 
                 int j = 1;
 
@@ -65,7 +67,7 @@ namespace RGZ_IM
             MiddleTimeInPhase1TextBox.Text = Math.Round((MiddleInPhase1Time / itCount), 2).ToString();
             MiddleTimeInPhase2TextBox.Text = Math.Round((MiddleInPhase2Time / itCount), 2).ToString();
             ChannelsMiddleTimeWorkTextBox.Text = Math.Round((InWorkTime / itCount), 2).ToString();
-            MiddleRequestTextBox.Text = Math.Round(((fullPeopleCount) / (itCount * Convert.ToDouble(FullTimeTextBox.Text))), 2).ToString();
+            MiddleRequestTextBox.Text = Math.Round((itCount * Convert.ToDouble(FullTimeTextBox.Text)) / intervals, 2).ToString();
         }
 
         double WriteData(SimulationUtility utility)
