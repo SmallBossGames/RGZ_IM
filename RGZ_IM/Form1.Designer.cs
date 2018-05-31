@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 333);
+            this.button1.Location = new System.Drawing.Point(6, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(777, 39);
             this.button1.TabIndex = 7;
@@ -84,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(119, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 13);
             this.label1.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             // FullTimeTextBox
             // 
-            this.FullTimeTextBox.Location = new System.Drawing.Point(181, 29);
+            this.FullTimeTextBox.Location = new System.Drawing.Point(288, 25);
             this.FullTimeTextBox.Name = "FullTimeTextBox";
             this.FullTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.FullTimeTextBox.TabIndex = 1;
@@ -100,7 +100,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(431, 82);
+            this.label2.Location = new System.Drawing.Point(458, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(203, 13);
             this.label2.TabIndex = 3;
@@ -109,7 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(428, 32);
+            this.label3.Location = new System.Drawing.Point(483, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 13);
             this.label3.TabIndex = 4;
@@ -118,7 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(428, 109);
+            this.label4.Location = new System.Drawing.Point(434, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(227, 13);
             this.label4.TabIndex = 5;
@@ -127,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(428, 134);
+            this.label5.Location = new System.Drawing.Point(434, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(232, 13);
             this.label5.TabIndex = 6;
@@ -135,7 +135,7 @@
             // 
             // PeopleCountTextBox
             // 
-            this.PeopleCountTextBox.Location = new System.Drawing.Point(606, 29);
+            this.PeopleCountTextBox.Location = new System.Drawing.Point(667, 29);
             this.PeopleCountTextBox.Name = "PeopleCountTextBox";
             this.PeopleCountTextBox.ReadOnly = true;
             this.PeopleCountTextBox.Size = new System.Drawing.Size(100, 20);
@@ -143,7 +143,7 @@
             // 
             // MiddleTimeInPhase1TextBox
             // 
-            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(661, 106);
+            this.MiddleTimeInPhase1TextBox.Location = new System.Drawing.Point(667, 106);
             this.MiddleTimeInPhase1TextBox.Name = "MiddleTimeInPhase1TextBox";
             this.MiddleTimeInPhase1TextBox.ReadOnly = true;
             this.MiddleTimeInPhase1TextBox.Size = new System.Drawing.Size(100, 20);
@@ -151,7 +151,7 @@
             // 
             // MiddleTimeInPhase2TextBox
             // 
-            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(661, 131);
+            this.MiddleTimeInPhase2TextBox.Location = new System.Drawing.Point(667, 131);
             this.MiddleTimeInPhase2TextBox.Name = "MiddleTimeInPhase2TextBox";
             this.MiddleTimeInPhase2TextBox.ReadOnly = true;
             this.MiddleTimeInPhase2TextBox.Size = new System.Drawing.Size(100, 20);
@@ -159,7 +159,7 @@
             // 
             // MiddleTimeInQueveTextBox
             // 
-            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(640, 77);
+            this.MiddleTimeInQueveTextBox.Location = new System.Drawing.Point(667, 80);
             this.MiddleTimeInQueveTextBox.Name = "MiddleTimeInQueveTextBox";
             this.MiddleTimeInQueveTextBox.ReadOnly = true;
             this.MiddleTimeInQueveTextBox.Size = new System.Drawing.Size(100, 20);
@@ -168,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 58);
+            this.label6.Location = new System.Drawing.Point(99, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 13);
             this.label6.TabIndex = 11;
@@ -177,7 +177,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(428, 158);
+            this.label8.Location = new System.Drawing.Point(428, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(233, 13);
             this.label8.TabIndex = 13;
@@ -186,7 +186,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(428, 58);
+            this.label9.Location = new System.Drawing.Point(434, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(227, 13);
             this.label9.TabIndex = 14;
@@ -195,7 +195,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 130);
+            this.label11.Location = new System.Drawing.Point(164, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 13);
             this.label11.TabIndex = 16;
@@ -203,7 +203,7 @@
             // 
             // ChannelCountTextBox
             // 
-            this.ChannelCountTextBox.Location = new System.Drawing.Point(201, 55);
+            this.ChannelCountTextBox.Location = new System.Drawing.Point(288, 53);
             this.ChannelCountTextBox.Name = "ChannelCountTextBox";
             this.ChannelCountTextBox.Size = new System.Drawing.Size(100, 20);
             this.ChannelCountTextBox.TabIndex = 2;
@@ -211,7 +211,7 @@
             // 
             // AccuracyTextBox
             // 
-            this.AccuracyTextBox.Location = new System.Drawing.Point(136, 127);
+            this.AccuracyTextBox.Location = new System.Drawing.Point(288, 128);
             this.AccuracyTextBox.Name = "AccuracyTextBox";
             this.AccuracyTextBox.Size = new System.Drawing.Size(100, 20);
             this.AccuracyTextBox.TabIndex = 5;
@@ -219,7 +219,7 @@
             // 
             // ChannelsMiddleTimeWorkTextBox
             // 
-            this.ChannelsMiddleTimeWorkTextBox.Location = new System.Drawing.Point(661, 55);
+            this.ChannelsMiddleTimeWorkTextBox.Location = new System.Drawing.Point(667, 55);
             this.ChannelsMiddleTimeWorkTextBox.Name = "ChannelsMiddleTimeWorkTextBox";
             this.ChannelsMiddleTimeWorkTextBox.ReadOnly = true;
             this.ChannelsMiddleTimeWorkTextBox.Size = new System.Drawing.Size(100, 20);
@@ -236,7 +236,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(14, 258);
+            this.label12.Location = new System.Drawing.Point(49, 256);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(233, 13);
             this.label12.TabIndex = 23;
@@ -244,7 +244,7 @@
             // 
             // NextPeopleTimeTextBox
             // 
-            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(253, 255);
+            this.NextPeopleTimeTextBox.Location = new System.Drawing.Point(288, 253);
             this.NextPeopleTimeTextBox.Name = "NextPeopleTimeTextBox";
             this.NextPeopleTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.NextPeopleTimeTextBox.TabIndex = 24;
@@ -253,7 +253,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 284);
+            this.label13.Location = new System.Drawing.Point(46, 282);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(236, 13);
             this.label13.TabIndex = 25;
@@ -261,7 +261,7 @@
             // 
             // NextWaveTimeTextBox
             // 
-            this.NextWaveTimeTextBox.Location = new System.Drawing.Point(256, 281);
+            this.NextWaveTimeTextBox.Location = new System.Drawing.Point(288, 279);
             this.NextWaveTimeTextBox.Name = "NextWaveTimeTextBox";
             this.NextWaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.NextWaveTimeTextBox.TabIndex = 26;
@@ -270,7 +270,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 310);
+            this.label14.Location = new System.Drawing.Point(27, 308);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(255, 13);
             this.label14.TabIndex = 27;
@@ -278,7 +278,7 @@
             // 
             // WaveTimeTextBox
             // 
-            this.WaveTimeTextBox.Location = new System.Drawing.Point(273, 307);
+            this.WaveTimeTextBox.Location = new System.Drawing.Point(288, 305);
             this.WaveTimeTextBox.Name = "WaveTimeTextBox";
             this.WaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.WaveTimeTextBox.TabIndex = 28;
@@ -287,7 +287,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(14, 180);
+            this.label15.Location = new System.Drawing.Point(56, 180);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(226, 13);
             this.label15.TabIndex = 29;
@@ -296,7 +296,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(14, 204);
+            this.label16.Location = new System.Drawing.Point(15, 204);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(267, 13);
             this.label16.TabIndex = 30;
@@ -304,7 +304,7 @@
             // 
             // MiddleServiceTimeTextBox
             // 
-            this.MiddleServiceTimeTextBox.Location = new System.Drawing.Point(238, 177);
+            this.MiddleServiceTimeTextBox.Location = new System.Drawing.Point(288, 177);
             this.MiddleServiceTimeTextBox.Name = "MiddleServiceTimeTextBox";
             this.MiddleServiceTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.MiddleServiceTimeTextBox.TabIndex = 31;
@@ -312,7 +312,7 @@
             // 
             // MiddleServiceWaveTimeTextBox
             // 
-            this.MiddleServiceWaveTimeTextBox.Location = new System.Drawing.Point(287, 201);
+            this.MiddleServiceWaveTimeTextBox.Location = new System.Drawing.Point(288, 201);
             this.MiddleServiceWaveTimeTextBox.Name = "MiddleServiceWaveTimeTextBox";
             this.MiddleServiceWaveTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.MiddleServiceWaveTimeTextBox.TabIndex = 32;
@@ -321,7 +321,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(14, 230);
+            this.label17.Location = new System.Drawing.Point(28, 230);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(254, 13);
             this.label17.TabIndex = 33;
@@ -329,7 +329,7 @@
             // 
             // OrderTimeTextBox
             // 
-            this.OrderTimeTextBox.Location = new System.Drawing.Point(273, 227);
+            this.OrderTimeTextBox.Location = new System.Drawing.Point(288, 227);
             this.OrderTimeTextBox.Name = "OrderTimeTextBox";
             this.OrderTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.OrderTimeTextBox.TabIndex = 34;
@@ -338,7 +338,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 6);
+            this.label18.Location = new System.Drawing.Point(12, 9);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(96, 13);
             this.label18.TabIndex = 35;
@@ -356,7 +356,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(16, 155);
+            this.label20.Location = new System.Drawing.Point(221, 158);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(61, 13);
             this.label20.TabIndex = 37;
@@ -364,7 +364,7 @@
             // 
             // KvantilTextBox
             // 
-            this.KvantilTextBox.Location = new System.Drawing.Point(83, 152);
+            this.KvantilTextBox.Location = new System.Drawing.Point(288, 154);
             this.KvantilTextBox.Name = "KvantilTextBox";
             this.KvantilTextBox.Size = new System.Drawing.Size(100, 20);
             this.KvantilTextBox.TabIndex = 6;
@@ -373,7 +373,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(431, 180);
+            this.label21.Location = new System.Drawing.Point(566, 184);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(95, 13);
             this.label21.TabIndex = 39;
@@ -381,7 +381,7 @@
             // 
             // IterationCountTextBox
             // 
-            this.IterationCountTextBox.Location = new System.Drawing.Point(532, 177);
+            this.IterationCountTextBox.Location = new System.Drawing.Point(667, 181);
             this.IterationCountTextBox.Name = "IterationCountTextBox";
             this.IterationCountTextBox.ReadOnly = true;
             this.IterationCountTextBox.Size = new System.Drawing.Size(100, 20);
@@ -390,7 +390,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 80);
+            this.label7.Location = new System.Drawing.Point(12, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(270, 13);
             this.label7.TabIndex = 41;
@@ -407,7 +407,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 106);
+            this.label10.Location = new System.Drawing.Point(16, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(266, 13);
             this.label10.TabIndex = 43;
@@ -415,7 +415,7 @@
             // 
             // channelExtremeTextBox
             // 
-            this.channelExtremeTextBox.Location = new System.Drawing.Point(284, 103);
+            this.channelExtremeTextBox.Location = new System.Drawing.Point(288, 102);
             this.channelExtremeTextBox.Name = "channelExtremeTextBox";
             this.channelExtremeTextBox.Size = new System.Drawing.Size(100, 20);
             this.channelExtremeTextBox.TabIndex = 4;
@@ -425,7 +425,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 381);
+            this.ClientSize = new System.Drawing.Size(795, 378);
             this.Controls.Add(this.channelExtremeTextBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.channelCountWaveTextBox);
