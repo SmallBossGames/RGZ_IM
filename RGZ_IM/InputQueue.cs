@@ -36,6 +36,7 @@ namespace RGZ_IM
             EndTime = timeScale + utility.GetNextPeopleTime(wave.IsWave);
             AddPeople(timeScale, utility.GetNextPeopleCount(wave.IsWave));
             flow.ToWork(timeScale);
+            statistic.IncIntervalCount();
             return true;
         }
 

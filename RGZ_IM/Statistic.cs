@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace RGZ_IM
 {
     class Statistic
@@ -21,6 +22,8 @@ namespace RGZ_IM
         public double MiddlePhase2Time => phase2Time / PeopleCount;
 
         public double MiddleInQueueTime => inQueueTime / PeopleCount;
+
+        public double IntervalCount { get; private set; }
  
 
         public Statistic()
@@ -30,14 +33,16 @@ namespace RGZ_IM
             inQueueTime = 0.0;
             FullPeopleCount = 0;
             PeopleCount = 0;
+            IntervalCount = 0;
         }
 
         public void IncFullPeopleCount() => FullPeopleCount++;
 
+        public void IncIntervalCount() => IntervalCount++;
+
         public void AddStatistic(Human human)
         {
             var inQueue = human.EndTime - human.CreateTime - human.ServiceTimePhase1;
-
             PeopleCount++;
             inQueueTime += inQueue;
             phase1Time += human.ServiceTimePhase1;
