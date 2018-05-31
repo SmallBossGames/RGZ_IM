@@ -46,12 +46,15 @@ namespace RGZ_IM
 
                 int j = 1;
 
-                foreach (var a in statistic.Flows)
+                if (i == 0)
                 {
-                    table.AddData(j, a.InWorkTime, a.ActiveTime, (a.InWorkTime / Convert.ToDouble(FullTimeTextBox.Text)));
-                    InWorkTime += a.InWorkTime;
-                    //  ActiveTime += a.ActiveTime;
-                    j++;
+                    foreach (var a in statistic.Flows)
+                    {
+                        table.AddData(j, a.InWorkTime, a.ActiveTime, (a.InWorkTime / Convert.ToDouble(FullTimeTextBox.Text)));
+                        InWorkTime += a.InWorkTime;
+                        //  ActiveTime += a.ActiveTime;
+                        j++;
+                    }
                 }
             }
 

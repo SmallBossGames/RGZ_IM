@@ -19,7 +19,7 @@ namespace RGZ_IM
 
         public void AddData(int j, double workTime, double activeTime, double procent)
         {
-            TableOfChannels.Rows.Add(j, workTime, activeTime, procent);
+            TableOfChannels.Rows.Add(j, Math.Round(workTime, 2), Math.Round(activeTime, 2), Math.Round(procent, 2));
         }
     }
 }
