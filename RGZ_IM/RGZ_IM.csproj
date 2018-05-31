@@ -55,7 +55,6 @@
     <Compile Include="InputQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request.cs" />
     <Compile Include="SimulationUtility.cs" />
     <Compile Include="Simulation.cs" />
     <Compile Include="Statistic.cs" />

@@ -56,17 +56,17 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Время работы";
+            this.Column2.HeaderText = "Время работы (в минутах)";
             this.Column2.Name = "Column2";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Время активности канала";
+            this.Column4.HeaderText = "Время активности канала (в минутах)";
             this.Column4.Name = "Column4";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Загрузка канала";
+            this.Column3.HeaderText = "Загрузка канала (в долях)";
             this.Column3.Name = "Column3";
             // 
             // Table
