@@ -11,10 +11,7 @@
 
         public int CompareTo(IQuest other) => EndTime.CompareTo(other.EndTime);
 
-        public Wave()
-        {
-            
-        }
+        public Wave() { }
 
         public void Init(FlowAlterantive flow, SimulationUtility utility)
         {

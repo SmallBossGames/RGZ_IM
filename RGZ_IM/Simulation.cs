@@ -33,10 +33,8 @@ namespace RGZ_IM
                     if (quests[i].TryMake(timeScale)) break;
                 }
             }
-
             return statistic;
         }
-
     }
 
     interface IQuest : IComparable<IQuest>

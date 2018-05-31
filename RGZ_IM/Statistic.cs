@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 namespace RGZ_IM
 {
     class Statistic
     {
-
         private double phase1Time;
         private double phase2Time;
         private double inQueueTime;
@@ -24,7 +22,6 @@ namespace RGZ_IM
         public double MiddleInQueueTime => inQueueTime / PeopleCount;
 
         public double IntervalCount { get; private set; }
- 
 
         public Statistic()
         {
@@ -72,10 +69,10 @@ namespace RGZ_IM
 
             public void PushHuman(Human data)
             {
-                if ((humanData != null)||(!IsActive))
+                if ((humanData != null) || (!IsActive))
                     throw new Exception("Incorrect change object");
 
-                humanData = data;   
+                humanData = data;
             }
 
             public Human PopHuman()
@@ -98,9 +95,7 @@ namespace RGZ_IM
             public int CompareTo(Channel other) => EndTime.CompareTo(other.EndTime);
         }
 
-
-
-        public class Human:IComparable<Human>
+        public class Human : IComparable<Human>
         {
             public double CreateTime { get; private set; }
 

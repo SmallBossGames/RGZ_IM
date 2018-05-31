@@ -46,7 +46,7 @@ namespace RGZ_IM
         {
             if ((flows.Count >= FreeFlowsCount) || (inputQueue.QueueLength == 0)) return false;
 
-            while((flows.Count < FreeFlowsCount) && (inputQueue.QueueLength > 0))
+            while ((flows.Count < FreeFlowsCount) && (inputQueue.QueueLength > 0))
             {
                 var human = inputQueue.Dequeue();
                 human.SetEndTime(timeScale);
@@ -54,7 +54,7 @@ namespace RGZ_IM
             }
 
             flows.Sort();
-            
+
             EndTime = flows[0].EndTime;
 
             Console.WriteLine($"{flows.Count} {FreeFlowsCount}");
@@ -130,8 +130,6 @@ namespace RGZ_IM
                 humanPool.SetEndTime(timeScale);
                 channelList.TryPushData(humanPool);
             }
-                
-
             return true;
         }
 
@@ -145,7 +143,6 @@ namespace RGZ_IM
             return true;
         }
     }
-
 
     class ChannelList
     {

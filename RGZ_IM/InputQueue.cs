@@ -22,10 +22,7 @@ namespace RGZ_IM
             EndTime = utility.GetNextPeopleTime(false);
         }
 
-        public InputQueue()
-        {
-            
-        }
+        public InputQueue() { }
 
         public double EndTime { get; private set; }
 

@@ -32,7 +32,6 @@ namespace RGZ_IM
             double intervals = 0;
             var table = new Table();
             double InWorkTime = 0;
-            // double ActiveTime = 0;
 
             itCount = WriteData(utility);
 
@@ -54,7 +53,6 @@ namespace RGZ_IM
                     {
                         table.AddData(j, a.InWorkTime, a.ActiveTime, (a.InWorkTime / Convert.ToDouble(FullTimeTextBox.Text)));
                         InWorkTime += a.InWorkTime;
-                        //  ActiveTime += a.ActiveTime;
                         j++;
                     }
                 }
