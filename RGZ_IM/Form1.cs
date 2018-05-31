@@ -62,7 +62,7 @@ namespace RGZ_IM
             MiddleTimeInPhase1TextBox.Text = Math.Round((MiddleInPhase1Time / itCount), 2).ToString();
             MiddleTimeInPhase2TextBox.Text = Math.Round((MiddleInPhase2Time / itCount), 2).ToString();
             ChannelsMiddleTimeWorkTextBox.Text = Math.Round((InWorkTime / itCount), 2).ToString();
-            MiddleRequestTextBox.Text = Math.Round(((fullPeopleCount * 1.7) / (itCount * Convert.ToDouble(FullTimeTextBox.Text))), 2).ToString();
+            MiddleRequestTextBox.Text = Math.Round(((fullPeopleCount) / (itCount * Convert.ToDouble(FullTimeTextBox.Text))), 2).ToString();
         }
 
         double WriteData(SimulationUtility utility)
